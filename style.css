@@ -664,21 +664,44 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 5px 14px;
+    padding: 6px 16px;
     border-radius: 20px;
     background: rgba(0, 0, 0, 0.35);
     border: 1px solid rgba(216, 181, 109, 0.4);
     color: #f7e9d4;
-    font-size: 12px;
+    font-size: 12.5px;
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
     letter-spacing: 0.5px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.sparkle-venue-pill:hover {
+    background: rgba(216, 181, 109, 0.22);
+    border-color: rgba(216, 181, 109, 0.85);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(216, 181, 109, 0.3);
+}
+
+.sparkle-venue-pill:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(216, 181, 109, 0.2);
 }
 
 .venue-pin {
     color: var(--gold);
     font-size: 13px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.sparkle-venue-pill:hover .venue-pin {
+    transform: scale(1.2);
 }
 
 .sparkle-modal-quote {
@@ -1360,12 +1383,112 @@ body {
 ================================ */
 
 .wedding-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-
+    display: flex;
+    justify-content: center;
     max-width: 650px;
     margin: 40px auto;
+    width: 100%;
+}
+
+.detail-box-unified {
+    width: 100%;
+    padding: 32px 24px 26px;
+    background: rgba(32, 5, 13, 0.65);
+    border: 1px solid rgba(216, 181, 109, 0.35);
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.functions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    position: relative;
+    gap: 30px;
+}
+
+.function-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.function-col span {
+    color: var(--gold);
+    font-size: 24px;
+}
+
+.function-col h3 {
+    margin: 14px 0 10px;
+    color: var(--light-gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.function-col p {
+    color: #fff3dd;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.function-col small {
+    display: block;
+    margin-top: 8px;
+    color: #dfcdbe;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+}
+
+.functions-divider-v {
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 50%;
+    width: 1px;
+    border-left: 1px dashed rgba(216, 181, 109, 0.35);
+    transform: translateX(-50%);
+}
+
+.shared-venue-section {
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(216, 181, 109, 0.35);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.shared-venue-section .venue-heading {
+    margin: 0 0 10px;
+    color: var(--light-gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.shared-venue-section p {
+    color: #fff3dd;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.shared-venue-section small {
+    display: block;
+    margin-top: 8px;
+    color: #dfcdbe;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
 }
 
 .detail-box {
@@ -1417,6 +1540,20 @@ body {
     font-size: 17px;
 }
 
+.card-venue-section {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px dashed rgba(216, 181, 109, 0.35);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-venue-section .venue-heading {
+    margin: 0 0 10px;
+}
+
 .venue-name-link {
     color: inherit;
     text-decoration: none;
@@ -1435,12 +1572,77 @@ body {
     text-underline-offset: 4px;
     transition: all 0.3s ease;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+}
+
+.map-pin-icon {
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
 }
 
 .venue-map-link:hover {
     color: var(--light-gold);
     text-decoration-color: var(--gold);
     text-shadow: 0 0 10px rgba(216, 181, 109, 0.5);
+}
+
+/* Custom Venue Tooltip according to UI */
+.venue-tooltip {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%) translateY(3px);
+    background: linear-gradient(135deg, rgba(46, 8, 20, 0.96), rgba(28, 5, 12, 0.98));
+    border: 1px solid rgba(216, 181, 109, 0.5);
+    color: #fff1d6;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.25px;
+    padding: 2.5px 7px;
+    border-radius: 3px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.55), 0 0 6px rgba(216, 181, 109, 0.2);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    z-index: 100;
+    text-decoration: none !important;
+}
+
+.venue-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -3.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 3.5px 3.5px 3.5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(216, 181, 109, 0.5) transparent;
+}
+
+.venue-tooltip::after {
+    content: '';
+    position: absolute;
+    top: -2.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 2.5px 2.5px 2.5px;
+    border-style: solid;
+    border-color: transparent transparent #2a0713 transparent;
+}
+
+.venue-map-link:hover .venue-tooltip,
+.venue-map-link:focus .venue-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
 }
 
 /* ==============================
@@ -2093,7 +2295,10 @@ body {
     }
 
     .welcome-content {
-        padding: 10px;
+        padding: 10px calc(11% + 8px);
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .subtitle {
@@ -2136,11 +2341,55 @@ body {
     }
 
     .welcome-content h1 {
-        font-size: 58px;
+        font-size: clamp(38px, 10vw, 50px);
+        line-height: 1.15;
+        margin: 8px 0;
+    }
+
+    .welcome-content h1 span {
+        display: block;
+        font-size: 0.58em;
+        margin: 2px auto 4px;
+        color: var(--gold);
     }
 
     .welcome-message {
-        font-size: 18px;
+        font-size: 17px;
+        line-height: 1.5;
+        margin: 12px 0 10px;
+        padding: 0 4px;
+    }
+
+    .scratch-date-container {
+        margin: 12px auto 8px;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .scratch-instruction {
+        font-size: clamp(8px, 2.2vw, 10px);
+        letter-spacing: 1px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        max-width: 100%;
+        box-sizing: border-box;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+    .date-revealed-banner {
+        font-size: 9px;
+        letter-spacing: 1.2px;
+        padding: 6px 12px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .scratch-subhint {
+        font-size: 9px;
+        letter-spacing: 1px;
+        margin-top: 6px;
     }
 
     .curtain {
@@ -2190,12 +2439,12 @@ body {
     }
 
     .scratch-card {
-        width: 260px;
+        width: min(260px, 100%);
         height: 82px;
     }
 
     .scratch-val {
-        font-size: 21px;
+        font-size: 20px;
         letter-spacing: 1.5px;
     }
 
@@ -2205,8 +2454,8 @@ body {
     }
 
     .countdown-item {
-        min-width: 48px;
-        padding: 6px 3px;
+        min-width: 44px;
+        padding: 6px 2px;
     }
 
     .countdown-number {
@@ -2228,9 +2477,20 @@ body {
     }
 
     .parentage-text {
-        font-size: 18px;
+        font-size: clamp(16px, 4.5vw, 19px);
         letter-spacing: 0.3px;
         margin: 2px auto 8px;
+        line-height: 1.35;
+    }
+
+    .parent-prefix {
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .parent-names {
+        display: block;
+        white-space: nowrap;
     }
 
     .couple-weds {
@@ -2243,8 +2503,41 @@ body {
     }
 
     .wedding-details {
+        margin: 30px auto;
+        padding: 0 4px;
+    }
+
+    .detail-box-unified {
+        padding: 24px 16px 20px;
+    }
+
+    .functions-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 20px;
+    }
+
+    .functions-divider-v {
+        position: static;
+        width: 100%;
+        height: 1px;
+        border-left: none;
+        border-top: 1px dashed rgba(216, 181, 109, 0.3);
+        transform: none;
+    }
+
+    .function-col p,
+    .shared-venue-section p {
+        font-size: 21px;
+    }
+
+    .function-col small,
+    .shared-venue-section small {
+        font-size: 15px;
+    }
+
+    .shared-venue-section {
+        margin-top: 20px;
+        padding-top: 16px;
     }
 
     .detail-box-venue {
@@ -2254,6 +2547,19 @@ body {
 
     .detail-box {
         padding: 22px 10px;
+    }
+
+    .card-venue-section {
+        margin-top: 15px;
+        padding-top: 12px;
+    }
+
+    .venue-tooltip {
+        font-size: 7.5px;
+        padding: 2px 6px;
+        letter-spacing: 0.2px;
+        top: calc(100% + 4px);
+        max-width: 180px;
     }
 
     .events h3 {

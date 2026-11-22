@@ -7,8 +7,41 @@
     <title>Honey Weds Keval ❤️</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=4">
+    <style>
+        .detail-box-unified {
+            width: 100%;
+            padding: 32px 24px 26px;
+            background: rgba(32, 5, 13, 0.65);
+            border: 1px solid rgba(216, 181, 109, 0.35);
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .venue-tooltip {
+            font-size: 8px !important;
+            padding: 2.5px 7px !important;
+            line-height: 1.2 !important;
+            letter-spacing: 0.25px !important;
+            border-radius: 3px !important;
+            top: calc(100% + 5px) !important;
+        }
+
+        @media (max-width: 600px) {
+            .venue-tooltip {
+                font-size: 7.5px !important;
+                padding: 2px 6px !important;
+                top: calc(100% + 4px) !important;
+                max-width: 180px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -95,11 +128,13 @@
                     <div class="arch-finial" aria-hidden="true">✦</div>
 
                     <!-- Background Mandala Aura SVG -->
-                    <svg class="mandala-aura" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <circle cx="220" cy="220" r="210" stroke="rgba(216,181,109,0.25)" stroke-width="1.2" stroke-dasharray="4 4"/>
-                        <circle cx="220" cy="220" r="195" stroke="rgba(216,181,109,0.38)" stroke-width="1.5"/>
-                        <circle cx="220" cy="220" r="170" stroke="rgba(216,181,109,0.25)" stroke-width="1"/>
-                        
+                    <svg class="mandala-aura" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <circle cx="220" cy="220" r="210" stroke="rgba(216,181,109,0.25)" stroke-width="1.2"
+                            stroke-dasharray="4 4" />
+                        <circle cx="220" cy="220" r="195" stroke="rgba(216,181,109,0.38)" stroke-width="1.5" />
+                        <circle cx="220" cy="220" r="170" stroke="rgba(216,181,109,0.25)" stroke-width="1" />
+
                         <!-- Outer 24 Lotus Petals -->
                         <g stroke="rgba(216,181,109,0.32)" stroke-width="1.2">
                             <path d="M 220,25 Q 234,105 220,185 Q 206,105 220,25" />
@@ -127,7 +162,7 @@
                             <path d="M 220,25 Q 234,105 220,185 Q 206,105 220,25" transform="rotate(330 220 220)" />
                             <path d="M 220,25 Q 234,105 220,185 Q 206,105 220,25" transform="rotate(345 220 220)" />
                         </g>
-                        
+
                         <!-- Middle 12 Lotus Petals -->
                         <g stroke="rgba(216,181,109,0.45)" stroke-width="1.4">
                             <path d="M 220,60 Q 232,130 220,200 Q 208,130 220,60" transform="rotate(15 220 220)" />
@@ -145,7 +180,8 @@
                         </g>
 
                         <!-- Inner Circle with dots -->
-                        <circle cx="220" cy="220" r="125" stroke="rgba(216,181,109,0.48)" stroke-width="1.5" stroke-dasharray="6 4"/>
+                        <circle cx="220" cy="220" r="125" stroke="rgba(216,181,109,0.48)" stroke-width="1.5"
+                            stroke-dasharray="6 4" />
                     </svg>
 
                     <!-- Arched Photo Frame -->
@@ -255,10 +291,12 @@
 
                 <div class="couple-invitation-names">
                     <h2 class="couple-name">Honey</h2>
-                    <p class="parentage-text">Daughter of Piyush Patel and Kinjal Patel</p>
+                    <p class="parentage-text"><span class="parent-prefix">Daughter of</span> <span
+                            class="parent-names">Piyush Patel and Kinjal Patel</span></p>
                     <span class="couple-weds">Weds</span>
                     <h2 class="couple-name">Keval</h2>
-                    <p class="parentage-text">Son of Pankaj Bhagat and Ketna Bhagat</p>
+                    <p class="parentage-text"><span class="parent-prefix">Son of</span> <span
+                            class="parent-names">Pankaj Bhagat and Ketna Bhagat</span></p>
                 </div>
 
                 <p class="invitation-message">
@@ -271,34 +309,50 @@
 
                 <div class="wedding-details">
 
-                    <!-- Grah Shantak (Left) -->
-                    <div class="detail-box">
-                        <span>❀</span>
-                        <h3>Grah Shantak</h3>
-                        <p>12:30 PM Onwards</p>
-                        <small>Followed by Lunch at 4:30 PM</small>
-                    </div>
+                    <!-- Single Unified Card for Both Functions with Shared Venue -->
+                    <div class="detail-box-unified">
+                        <div class="functions-grid">
+                            <!-- Grah Shantak -->
+                            <div class="function-col">
+                                <span>❀</span>
+                                <h3>Grah Shantak</h3>
+                                <p>12:30 PM Onwards</p>
+                                <small>Followed by Lunch at 4:30 PM</small>
+                            </div>
 
-                    <!-- Wedding (Right) -->
-                    <div class="detail-box">
-                        <span>✧</span>
-                        <h3>Wedding</h3>
-                        <p>5 December 2026</p>
-                        <small>Saturday</small>
-                    </div>
+                            <!-- Vertical divider between functions -->
+                            <div class="functions-divider-v" aria-hidden="true"></div>
 
-                    <!-- Wedding Venue (Below in the Middle) -->
-                    <div class="detail-box detail-box-venue">
-                        <span>⌖</span>
-                        <h3>Wedding Venue</h3>
-                        <p><a href="https://maps.app.goo.gl/v9FxoDVpB35sMNLo7" target="_blank" rel="noopener noreferrer"
-                                class="venue-name-link" title="Open in Google Maps">Sai Darshan Hall</a></p>
-                        <small>
-                            <a href="https://maps.app.goo.gl/v9FxoDVpB35sMNLo7" target="_blank"
-                                rel="noopener noreferrer" class="venue-map-link" title="Open in Google Maps">
-                                Pardi 📍
-                            </a>
-                        </small>
+                            <!-- Wedding -->
+                            <div class="function-col">
+                                <span>✧</span>
+                                <h3>Wedding</h3>
+                                <p>5 December 2026</p>
+                                <small>Saturday, 6:00 PM Onwards</small>
+                            </div>
+                        </div>
+
+                        <!-- Single Shared Location for both functions -->
+                        <div class="shared-venue-section">
+                            <h3 class="venue-heading">Venue</h3>
+                            <p><a href="https://maps.app.goo.gl/v9FxoDVpB35sMNLo7" target="_blank"
+                                    rel="noopener noreferrer" class="venue-name-link"
+                                    aria-label="Sai Darshan Hall on Google Maps">Sai Darshan Hall</a></p>
+                            <small>
+                                <a href="https://maps.app.goo.gl/v9FxoDVpB35sMNLo7" target="_blank"
+                                    rel="noopener noreferrer" class="venue-map-link"
+                                    aria-label="Click here for the location">
+                                    <span>Pardi</span> <svg class="map-pin-icon" viewBox="0 0 24 24" width="14"
+                                        height="14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                                            fill="#EA4335" />
+                                        <circle cx="12" cy="9" r="2.8" fill="#B20D0D" />
+                                    </svg>
+                                    <span class="venue-tooltip" style="font-size: 8px; padding: 2.5px 7px; line-height: 1.2;" role="tooltip">Click here for the location</span>
+                                </a>
+                            </small>
+                        </div>
                     </div>
 
                 </div>
@@ -354,7 +408,8 @@
 
                     <!-- 3D Book Stage -->
                     <div class="book-stage">
-                        <div class="book" id="photobook" role="region" aria-label="Interactive Wedding Photobook - Turn pages to view our photos">
+                        <div class="book" id="photobook" role="region"
+                            aria-label="Interactive Wedding Photobook - Turn pages to view our photos">
                             <div class="book-spine-fold"></div>
 
                             <!-- Left Base Page: Page 1 (Our Little Moments) -->
@@ -373,8 +428,11 @@
                                     <div class="page-gold-border"></div>
                                     <div class="polaroid polaroid-rot-right">
                                         <div class="polaroid-tape"></div>
-                                        <div class="polaroid-img-wrap" tabindex="0" role="button" aria-label="Enlarge photo: he still looks at her like this">
-                                            <img src="Copy of _DS_3238.JPG" alt="Honey & Keval smiling together at picnic in the park" loading="lazy">
+                                        <div class="polaroid-img-wrap" tabindex="0" role="button"
+                                            aria-label="Enlarge photo: he still looks at her like this">
+                                            <img src="WhatsApp Image 2026-11-22 at 5.04.28 PM (1).jpeg"
+                                                alt="Honey & Keval smiling together at picnic in the park"
+                                                loading="lazy">
                                         </div>
                                         <p class="polaroid-caption">he still looks at her like this</p>
                                     </div>
@@ -383,8 +441,11 @@
                                     <div class="page-gold-border"></div>
                                     <div class="polaroid polaroid-rot-left">
                                         <div class="polaroid-tape"></div>
-                                        <div class="polaroid-img-wrap" tabindex="0" role="button" aria-label="Enlarge photo: forehead to forehead, always">
-                                            <img src="Copy of _DS_3412.JPG" alt="Holding hands with beautiful flower bouquet and engagement ring" loading="lazy">
+                                        <div class="polaroid-img-wrap" tabindex="0" role="button"
+                                            aria-label="Enlarge photo: forehead to forehead, always">
+                                            <img src="WhatsApp Image 2026-11-22 at 5.04.28 PM (2).jpeg"
+                                                alt="Holding hands with beautiful flower bouquet and engagement ring"
+                                                loading="lazy">
                                         </div>
                                         <p class="polaroid-caption">Hand in hand, always</p>
                                     </div>
@@ -397,8 +458,10 @@
                                     <div class="page-gold-border"></div>
                                     <div class="polaroid polaroid-rot-right">
                                         <div class="polaroid-tape"></div>
-                                        <div class="polaroid-img-wrap" tabindex="0" role="button" aria-label="Enlarge photo: home is right here">
-                                            <img src="Copy of _DS_3578.JPG" alt="Dancing with joy on the sea beach at sunset" loading="lazy">
+                                        <div class="polaroid-img-wrap" tabindex="0" role="button"
+                                            aria-label="Enlarge photo: home is right here">
+                                            <img src="WhatsApp Image 2026-11-22 at 5.04.27 PM.jpeg"
+                                                alt="Dancing with joy on the sea beach at sunset" loading="lazy">
                                         </div>
                                         <p class="polaroid-caption">home is right here</p>
                                     </div>
@@ -407,8 +470,10 @@
                                     <div class="page-gold-border"></div>
                                     <div class="polaroid polaroid-rot-left">
                                         <div class="polaroid-tape"></div>
-                                        <div class="polaroid-img-wrap" tabindex="0" role="button" aria-label="Enlarge photo: in your arms, forever">
-                                            <img src="Copy of _DS_3657.JPG" alt="Sweet romantic embrace on the beach shore" loading="lazy">
+                                        <div class="polaroid-img-wrap" tabindex="0" role="button"
+                                            aria-label="Enlarge photo: in your arms, forever">
+                                            <img src="WhatsApp Image 2026-11-22 at 5.04.29 PM.jpeg"
+                                                alt="Honey & Keval embracing in nature" loading="lazy">
                                         </div>
                                         <p class="polaroid-caption">in your arms, forever</p>
                                     </div>
@@ -421,8 +486,10 @@
                                     <div class="page-gold-border"></div>
                                     <div class="polaroid polaroid-rot-right">
                                         <div class="polaroid-tape"></div>
-                                        <div class="polaroid-img-wrap" tabindex="0" role="button" aria-label="Enlarge photo: every moment with you">
-                                            <img src="moment-grass.jpg" alt="Honey & Keval embracing in nature" loading="lazy">
+                                        <div class="polaroid-img-wrap" tabindex="0" role="button"
+                                            aria-label="Enlarge photo: every moment with you">
+                                            <img src="couple-walking.jpg"
+                                                alt="Honey & Keval walking together holding hands" loading="lazy">
                                         </div>
                                         <p class="polaroid-caption">every moment with you</p>
                                     </div>
@@ -431,8 +498,10 @@
                                     <div class="page-gold-border"></div>
                                     <div class="polaroid polaroid-rot-left">
                                         <div class="polaroid-tape"></div>
-                                        <div class="polaroid-img-wrap" tabindex="0" role="button" aria-label="Enlarge photo: chasing sunsets together">
-                                            <img src="moment-sunset.jpg" alt="Honey & Keval holding hands at sunset on the beach" loading="lazy">
+                                        <div class="polaroid-img-wrap" tabindex="0" role="button"
+                                            aria-label="Enlarge photo: chasing sunsets together">
+                                            <img src="WhatsApp Image 2026-11-22 at 5.04.28 PM.jpeg"
+                                                alt="Honey & Keval holding hands at sunset on the beach" loading="lazy">
                                         </div>
                                         <p class="polaroid-caption">chasing sunsets together</p>
                                     </div>
@@ -469,7 +538,8 @@
 
                 <!-- Photobook Controls -->
                 <div class="book-controls">
-                    <button type="button" class="book-btn book-btn-prev" id="btn-prev" aria-label="Previous Page" disabled>‹</button>
+                    <button type="button" class="book-btn book-btn-prev" id="btn-prev" aria-label="Previous Page"
+                        disabled>‹</button>
                     <span class="page-indicator" id="page-indicator" aria-live="polite">1 / 4</span>
                     <button type="button" class="book-btn" id="btn-next">Next page <span>›</span></button>
                 </div>
@@ -486,12 +556,14 @@
         </div>
 
         <!-- Date Reveal Celebration Sparkle Popup -->
-        <div class="date-sparkle-modal" id="date-sparkle-modal" role="dialog" aria-modal="true" aria-label="Wedding Date Announcement">
+        <div class="date-sparkle-modal" id="date-sparkle-modal" role="dialog" aria-modal="true"
+            aria-label="Wedding Date Announcement">
             <canvas id="sparkle-canvas" class="sparkle-canvas"></canvas>
-            
+
             <div class="sparkle-modal-card">
-                <button class="sparkle-close-btn" id="sparkle-close-btn" aria-label="Close Announcement">&times;</button>
-                
+                <button class="sparkle-close-btn" id="sparkle-close-btn"
+                    aria-label="Close Announcement">&times;</button>
+
                 <span class="modal-corner modal-corner-tl"></span>
                 <span class="modal-corner modal-corner-tr"></span>
                 <span class="modal-corner modal-corner-bl"></span>
@@ -510,7 +582,7 @@
                     <p class="modal-auspicious">॥ शुभ विवाह ॥</p>
                     <div class="modal-badge">
                         <span class="badge-star">✨</span>
-                        <span class="badge-text">SAVE THE DATE</span>
+                        <span class="badge-text">The Wait is Over</span>
                         <span class="badge-star">✨</span>
                     </div>
                     <h2 class="modal-couple-names">Honey <span class="weds-amp">&</span> Keval</h2>
@@ -519,26 +591,24 @@
                 <div class="sparkle-date-badge">
                     <div class="sparkle-date-glow"></div>
                     <p class="sparkle-date-main">05 DECEMBER 2026</p>
-                    <p class="sparkle-date-sub">SATURDAY</p>
                 </div>
 
-                <div class="sparkle-venue-pill">
-                    <span class="venue-pin">📍</span>
+                <a href="https://maps.app.goo.gl/v9FxoDVpB35sMNLo7" target="_blank" rel="noopener noreferrer"
+                    class="sparkle-venue-pill" aria-label="Open Sai Darshan Hall on Google Maps">
+                    <span class="venue-pin"><svg class="map-pin-icon" viewBox="0 0 24 24" width="15" height="15"
+                            fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                                fill="#EA4335" />
+                            <circle cx="12" cy="9" r="2.8" fill="#B20D0D" />
+                        </svg></span>
                     <span class="venue-name">Sai Darshan Hall, Pardi</span>
-                </div>
+                </a>
 
                 <p class="sparkle-modal-quote">
                     “Two souls, one heartbeat. We invite you to be part of our most cherished milestone.”
                 </p>
 
                 <div class="sparkle-modal-actions">
-                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Honey+%26+Keval%27s+Wedding&dates=20261205T043000Z/20261205T173000Z&details=Wedding+Ceremony+of+Honey+and+Keval+at+Sai+Darshan+Hall,+Pardi.+Venue+Map:+https://maps.app.goo.gl/v9FxoDVpB35sMNLo7&location=Sai+Darshan+Hall,+Pardi" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="sparkle-action-btn primary-cal-btn" 
-                       id="add-calendar-btn">
-                        <span>📅 Add To Calendar</span>
-                    </a>
                     <button type="button" class="sparkle-action-btn secondary-btn" id="sparkle-explore-btn">
                         <span>View Details ↓</span>
                     </button>
@@ -658,22 +728,22 @@
 
                     let baseWidth, baseHeight, speed, alpha, depthFactor;
                     if (layer === 0) {
-                        baseWidth = 12 + Math.random() * 10;
-                        baseHeight = baseWidth * (1.3 + Math.random() * 0.18);
+                        baseWidth = 14 + Math.random() * 10;
+                        baseHeight = baseWidth * (0.86 + Math.random() * 0.05);
                         speed = 0.35 + Math.random() * 0.35;
-                        alpha = 0.5 + Math.random() * 0.3;
+                        alpha = 0.45 + Math.random() * 0.28;
                         depthFactor = 0.4;
                     } else if (layer === 1) {
-                        baseWidth = 24 + Math.random() * 14;
-                        baseHeight = baseWidth * (1.32 + Math.random() * 0.18);
-                        speed = 0.65 + Math.random() * 0.5;
-                        alpha = 0.78 + Math.random() * 0.18;
+                        baseWidth = 26 + Math.random() * 14;
+                        baseHeight = baseWidth * (0.86 + Math.random() * 0.05);
+                        speed = 0.65 + Math.random() * 0.45;
+                        alpha = 0.72 + Math.random() * 0.18;
                         depthFactor = 0.75;
                     } else {
-                        baseWidth = 44 + Math.random() * 18;
-                        baseHeight = baseWidth * (1.35 + Math.random() * 0.2);
-                        speed = 1.1 + Math.random() * 0.7;
-                        alpha = 0.9 + Math.random() * 0.1;
+                        baseWidth = 46 + Math.random() * 18;
+                        baseHeight = baseWidth * (0.86 + Math.random() * 0.05);
+                        speed = 1.0 + Math.random() * 0.6;
+                        alpha = 0.88 + Math.random() * 0.12;
                         depthFactor = 1.2;
                     }
 
@@ -718,8 +788,8 @@
                 spawnLanternAt(x, y) {
                     const cutoffY = this.getCutoffY();
                     if (y < cutoffY) return;
-                    const baseWidth = 32 + Math.random() * 16;
-                    const baseHeight = baseWidth * 1.35;
+                    const baseWidth = 38 + Math.random() * 18;
+                    const baseHeight = baseWidth * 0.88;
                     this.lanterns.push({
                         x: x,
                         baseX: x,
@@ -851,7 +921,7 @@
                     for (let i = 0; i < this.sparks.length; i++) {
                         const s = this.sparks[i];
                         if (s.y >= cutoffY) {
-                            this.ctx.fillStyle = `rgba(255, 215, 110, ${s.alpha})`;
+                            this.ctx.fillStyle = `rgba(255, 255, 255, ${s.alpha * 0.85})`;
                             this.ctx.beginPath();
                             this.ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
                             this.ctx.fill();
@@ -869,89 +939,106 @@
 
                     const w = l.width;
                     const h = l.height;
-                    const flicker = 0.94 + Math.sin(l.flickerSeed + timestamp * 0.008) * 0.06;
                     const currentAlpha = l.currentAlpha;
+                    const pulse = 0.94 + Math.sin(l.flickerSeed + timestamp * 0.0035) * 0.06;
 
-                    // 1. Soft radial outer glow aura
-                    const glowRadius = Math.max(w, h) * 1.4;
-                    const glowGrad = ctx.createRadialGradient(0, -h * 0.25, 0, 0, -h * 0.25, glowRadius);
-                    glowGrad.addColorStop(0, `rgba(255, 185, 55, ${0.42 * currentAlpha * flicker})`);
-                    glowGrad.addColorStop(0.35, `rgba(255, 125, 25, ${0.2 * currentAlpha * flicker})`);
-                    glowGrad.addColorStop(0.7, `rgba(220, 65, 15, ${0.07 * currentAlpha * flicker})`);
-                    glowGrad.addColorStop(1, 'rgba(200, 45, 10, 0)');
-                    ctx.fillStyle = glowGrad;
-                    ctx.beginPath();
-                    ctx.arc(0, -h * 0.25, glowRadius, 0, Math.PI * 2);
-                    ctx.fill();
-
-                    // 2. Translucent paper body outline
-                    ctx.beginPath();
-                    ctx.moveTo(-w * 0.5, 0);
-                    ctx.bezierCurveTo(-w * 0.56, -h * 0.38, -w * 0.52, -h * 0.75, -w * 0.42, -h);
-                    ctx.quadraticCurveTo(0, -h * 1.08, w * 0.42, -h);
-                    ctx.bezierCurveTo(w * 0.52, -h * 0.75, w * 0.56, -h * 0.38, w * 0.5, 0);
-                    ctx.bezierCurveTo(w * 0.35, h * 0.14, -w * 0.35, h * 0.14, -w * 0.5, 0);
-                    ctx.closePath();
-
-                    // Illuminated warm rice paper gradient
-                    const paperGrad = ctx.createLinearGradient(0, 0, 0, -h);
-                    paperGrad.addColorStop(0, `rgba(255, 238, 165, ${0.98 * currentAlpha})`);
-                    paperGrad.addColorStop(0.18, `rgba(255, 198, 75, ${0.94 * currentAlpha})`);
-                    paperGrad.addColorStop(0.55, `rgba(245, 145, 35, ${0.88 * currentAlpha})`);
-                    paperGrad.addColorStop(0.85, `rgba(220, 85, 20, ${0.82 * currentAlpha})`);
-                    paperGrad.addColorStop(1, `rgba(185, 55, 15, ${0.76 * currentAlpha})`);
-                    ctx.fillStyle = paperGrad;
-                    ctx.fill();
-
-                    // Vertical ribs on medium and large lanterns
-                    if (w > 25) {
-                        ctx.strokeStyle = `rgba(180, 60, 10, ${0.2 * currentAlpha})`;
-                        ctx.lineWidth = 1;
+                    // Trace smooth romantic heart contour matching user image
+                    function traceHeart() {
                         ctx.beginPath();
-                        ctx.moveTo(-w * 0.22, 0);
-                        ctx.quadraticCurveTo(-w * 0.26, -h * 0.5, -w * 0.18, -h * 0.98);
-                        ctx.stroke();
+                        const bottomY = h * 0.48;
+                        const lobeY = -h * 0.44;
+                        const indentY = -h * 0.2;
 
-                        ctx.beginPath();
-                        ctx.moveTo(w * 0.22, 0);
-                        ctx.quadraticCurveTo(w * 0.26, -h * 0.5, w * 0.18, -h * 0.98);
-                        ctx.stroke();
+                        ctx.moveTo(0, bottomY);
+                        // Left curve
+                        ctx.bezierCurveTo(-w * 0.62, h * 0.1, -w * 0.62, -h * 0.32, -w * 0.32, lobeY);
+                        ctx.bezierCurveTo(-w * 0.12, -h * 0.48, -w * 0.02, -h * 0.3, 0, indentY);
+                        // Right curve
+                        ctx.bezierCurveTo(w * 0.02, -h * 0.3, w * 0.12, -h * 0.48, w * 0.32, lobeY);
+                        ctx.bezierCurveTo(w * 0.62, -h * 0.32, w * 0.62, h * 0.1, 0, bottomY);
+                        ctx.closePath();
                     }
 
-                    // 3. Bottom wire rim
+                    // 1. Soft glowing aura around the heart
+                    const haloRadius = Math.max(w, h) * 0.92;
+                    const halo = ctx.createRadialGradient(0, -h * 0.06, 0, 0, -h * 0.06, haloRadius);
+                    halo.addColorStop(0, `rgba(255, 255, 255, ${0.12 * currentAlpha * pulse})`);
+                    halo.addColorStop(0.48, `rgba(255, 255, 255, ${0.04 * currentAlpha * pulse})`);
+                    halo.addColorStop(1, 'rgba(255, 255, 255, 0)');
+                    ctx.fillStyle = halo;
                     ctx.beginPath();
-                    ctx.ellipse(0, 0, w * 0.46, h * 0.11, 0, 0, Math.PI * 2);
-                    ctx.strokeStyle = `rgba(80, 25, 5, ${0.65 * currentAlpha})`;
-                    ctx.lineWidth = Math.max(1, w * 0.035);
+                    ctx.arc(0, -h * 0.06, haloRadius, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    // 2. Soft translucent inner heart fill
+                    traceHeart();
+                    ctx.fillStyle = `rgba(255, 255, 255, ${0.032 * currentAlpha * pulse})`;
+                    ctx.fill();
+
+                    // 3. Layered outer neon white glow strokes
+                    // Wide diffuse outer glow
+                    traceHeart();
+                    ctx.strokeStyle = `rgba(255, 255, 255, ${0.18 * currentAlpha * pulse})`;
+                    ctx.lineWidth = Math.max(3.2, w * 0.11);
                     ctx.stroke();
 
-                    // Wire crossbar
+                    // Mid-range glow
+                    traceHeart();
+                    ctx.strokeStyle = `rgba(255, 255, 255, ${0.48 * currentAlpha * pulse})`;
+                    ctx.lineWidth = Math.max(2.0, w * 0.055);
+                    ctx.stroke();
+
+                    // Brilliant sharp white core outline
+                    traceHeart();
+                    ctx.strokeStyle = `rgba(255, 255, 255, ${0.98 * currentAlpha})`;
+                    ctx.lineWidth = Math.max(1.2, w * 0.026);
+                    ctx.stroke();
+
+                    // 4. Sparkling lens glints on the contour
                     if (w > 20) {
-                        ctx.beginPath();
-                        ctx.moveTo(-w * 0.4, 0);
-                        ctx.lineTo(w * 0.4, 0);
-                        ctx.strokeStyle = `rgba(70, 20, 5, ${0.45 * currentAlpha})`;
-                        ctx.lineWidth = 1;
-                        ctx.stroke();
+                        const glints = [
+                            { x: w * 0.28, y: -h * 0.38, size: w * 0.065, p: 0.5 + 0.5 * Math.sin(l.flickerSeed * 1.5 + timestamp * 0.005) },
+                            { x: w * 0.44, y: h * 0.08, size: w * 0.055, p: 0.5 + 0.5 * Math.sin(l.flickerSeed * 2.2 + timestamp * 0.004 + 1.7) },
+                            { x: -w * 0.38, y: h * 0.18, size: w * 0.05, p: 0.5 + 0.5 * Math.sin(l.flickerSeed * 0.9 + timestamp * 0.006 + 3.2) }
+                        ];
+
+                        for (let j = 0; j < glints.length; j++) {
+                            const gl = glints[j];
+                            const glAlpha = currentAlpha * gl.p;
+                            if (glAlpha > 0.06) {
+                                ctx.save();
+                                ctx.translate(gl.x, gl.y);
+
+                                // Lens flare halo
+                                const fGlow = ctx.createRadialGradient(0, 0, 0, 0, 0, gl.size * 2.5);
+                                fGlow.addColorStop(0, `rgba(255, 255, 255, ${0.92 * glAlpha})`);
+                                fGlow.addColorStop(0.35, `rgba(255, 255, 255, ${0.45 * glAlpha})`);
+                                fGlow.addColorStop(1, 'rgba(255, 255, 255, 0)');
+                                ctx.fillStyle = fGlow;
+                                ctx.beginPath();
+                                ctx.arc(0, 0, gl.size * 2.5, 0, Math.PI * 2);
+                                ctx.fill();
+
+                                // 4-point cross flare rays
+                                ctx.strokeStyle = `rgba(255, 255, 255, ${0.92 * glAlpha})`;
+                                ctx.lineWidth = 1;
+                                ctx.beginPath();
+                                ctx.moveTo(-gl.size * 2.8, 0);
+                                ctx.lineTo(gl.size * 2.8, 0);
+                                ctx.moveTo(0, -gl.size * 2.8);
+                                ctx.lineTo(0, gl.size * 2.8);
+                                ctx.stroke();
+
+                                // Bright spark center
+                                ctx.fillStyle = `rgba(255, 255, 255, ${glAlpha})`;
+                                ctx.beginPath();
+                                ctx.arc(0, 0, Math.max(1, gl.size * 0.5), 0, Math.PI * 2);
+                                ctx.fill();
+
+                                ctx.restore();
+                            }
+                        }
                     }
-
-                    // 4. Burning flame at the bottom center
-                    const flameSize = Math.max(3, w * 0.22) * flicker;
-                    const flameGrad = ctx.createRadialGradient(0, -h * 0.03, 0, 0, -h * 0.03, flameSize * 2.2);
-                    flameGrad.addColorStop(0, `rgba(255, 255, 240, ${1 * currentAlpha})`);
-                    flameGrad.addColorStop(0.35, `rgba(255, 220, 65, ${0.9 * currentAlpha})`);
-                    flameGrad.addColorStop(0.7, `rgba(255, 125, 25, ${0.6 * currentAlpha})`);
-                    flameGrad.addColorStop(1, 'rgba(255, 80, 0, 0)');
-                    ctx.fillStyle = flameGrad;
-                    ctx.beginPath();
-                    ctx.arc(0, -h * 0.03, flameSize * 2.2, 0, Math.PI * 2);
-                    ctx.fill();
-
-                    // White-hot flame core
-                    ctx.fillStyle = `rgba(255, 255, 255, ${0.98 * currentAlpha})`;
-                    ctx.beginPath();
-                    ctx.ellipse(0, -h * 0.03, flameSize * 0.45, flameSize * 0.7, 0, 0, Math.PI * 2);
-                    ctx.fill();
 
                     ctx.restore();
                 }
